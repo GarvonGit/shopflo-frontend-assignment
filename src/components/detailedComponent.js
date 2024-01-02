@@ -9,7 +9,7 @@ import Box from "@mui/material/Box";
 import Chip from "@mui/material/Chip";
 import { format } from "date-fns";
 import { useParams, useLocation, json } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 const DetailedViewPage = () => {
   //   const { id } = useParams();
   const location = useLocation();
@@ -26,6 +26,10 @@ const DetailedViewPage = () => {
   const zipcode = query.get("zipcode");
   const status = query.get("status");
   const formattedDate = format(new Date(listedOn), "PPP");
+  const navigate = useNavigate();
+  const reserve = () => {
+    navigate("/reserve");
+  };
   return (
     <Container maxWidth="md">
       <Box
@@ -86,7 +90,12 @@ const DetailedViewPage = () => {
           <Typography variant="h6" sx={{ my: 2 }}>
             Price: ${price}
           </Typography>
-          <Button variant="contained" color="primary" size="large">
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            onClick={reserve}
+          >
             Reserve
           </Button>
         </Box>
