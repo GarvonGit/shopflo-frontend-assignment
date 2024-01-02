@@ -59,7 +59,12 @@ const DetailedViewPage = () => {
             component="img"
             image={imageURL}
             alt={name}
-            sx={{ width: "100%", maxHeight: "500px", objectFit: "cover" }}
+            sx={{
+              width: "100%",
+              maxHeight: "500px",
+              objectFit: "cover",
+              borderRadius: "15px",
+            }}
           />
         </Box>
 

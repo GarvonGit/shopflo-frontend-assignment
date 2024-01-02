@@ -40,46 +40,36 @@ const HomePage = () => {
   };
   const zoom = 11;
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", flexDirection: "column" }}>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6" noWrap component="div">
+          <Typography variant="h5" noWrap component="div">
             TripAdvisor
           </Typography>
         </Toolbar>
       </AppBar>
 
       <Box sx={{ display: "flex" }}>
-        <Box sx={{ width: "40%", p: 2 }}>
+        <Box sx={{ width: "50%", height: "70vh", p: 2 }}>
           <Map center={center} zoom={zoom} listings={listings} />
         </Box>
 
-        <Box sx={{ width: "60%" }}>
-          <Paper
-            sx={{
-              position: "absolute",
-              bottom: 0,
-              left: "50%",
-              right: 0,
-              p: 2,
-            }}
-          >
-            <Grid container spacing={2} sx={{ flexWrap: "wrap" }}>
-              {listings
-                .slice((currentPage - 1) * 4, currentPage * 4)
-                .map((listing) => (
-                  <Grid item key={listing.id}>
-                    <ListingCard {...listing} />
-                  </Grid>
-                ))}
-            </Grid>
+        <Box sx={{ width: "70%", height: "70vh", p: 2 }}>
+          <Grid container spacing={2} sx={{ flexWrap: "wrap" }}>
+            {listings
+              .slice((currentPage - 1) * 4, currentPage * 4)
+              .map((listing) => (
+                <Grid item key={listing.id}>
+                  <ListingCard {...listing} />
+                </Grid>
+              ))}
+          </Grid>
 
-            <ListingPagination
-              count={totalPages}
-              page={currentPage}
-              onChange={handlePageChange}
-            />
-          </Paper>
+          <ListingPagination
+            count={totalPages}
+            page={currentPage}
+            onChange={handlePageChange}
+          />
         </Box>
       </Box>
     </Box>
