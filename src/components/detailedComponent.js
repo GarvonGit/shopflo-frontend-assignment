@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "@mui/material/Card";
+import Button from "@mui/material/Button";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
@@ -28,51 +29,49 @@ const DetailedViewPage = () => {
   return (
     <Container maxWidth="md">
       <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        minHeight="100vh"
+        sx={{
+          display: "grid",
+          gridTemplateColumns: "repeat(12, 1fr)",
+          gap: 2,
+          alignItems: "start", // Align items to the start of the container
+          justifyContent: "center",
+          pt: 8,
+          pb: 8,
+        }}
       >
-        <Card
-          raised
-          sx={{
-            maxWidth: 600,
-            boxShadow: 3,
-            ":hover": { boxShadow: 10 },
-            m: 2,
-          }}
-        >
-          <CardMedia component="img" height="300" image={imageURL} alt={name} />
+        {/* Name and Description Section */}
+        <Box gridColumn="span 12">
+          <Typography gutterBottom variant="h4" align="left">
+            {name}
+          </Typography>
+          <Typography variant="body1" align="left">
+            {description}
+          </Typography>
+        </Box>
+
+        {/* Image Section */}
+        <Box gridColumn="span 12">
+          <CardMedia
+            component="img"
+            image={imageURL}
+            alt={name}
+            sx={{ width: "100%", maxHeight: "500px", objectFit: "cover" }}
+          />
+        </Box>
+
+        {/* Details Section */}
+        <Box gridColumn="span 8">
           <CardContent>
-            <Typography gutterBottom variant="h5" align="center">
-              {name}
-            </Typography>
-            <Typography variant="body1" align="center">
-              {description}
-            </Typography>
-            <Typography
-              variant="body2"
-              align="center"
-              color="textSecondary"
-              sx={{ my: 2 }}
-            >
+            <Typography variant="body2" align="left" color="textSecondary">
               Listed by: {listedBy} | Zipcode: {zipcode}
             </Typography>
-            <Typography variant="body2" align="center" color="textSecondary">
+            <Typography variant="body2" align="left" color="textSecondary">
               Latitude: {latitude}, Longitude: {longitude}
             </Typography>
-            <Typography variant="h6" align="center" sx={{ my: 2 }}>
-              Price: ${price}
-            </Typography>
-            <Typography variant="body2" align="center" color="textSecondary">
+            <Typography variant="body2" align="left" color="textSecondary">
               Listed on: {formattedDate}
             </Typography>
-            <Box
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-              mt={2}
-            >
+            <Box mt={2}>
               <Chip
                 label={status ? "Available" : "Not Available"}
                 color={status ? "success" : "error"}
@@ -80,7 +79,17 @@ const DetailedViewPage = () => {
               />
             </Box>
           </CardContent>
-        </Card>
+        </Box>
+
+        {/* Price and Reserve Button Section */}
+        <Box gridColumn="span 4" sx={{ textAlign: "center" }}>
+          <Typography variant="h6" sx={{ my: 2 }}>
+            Price: ${price}
+          </Typography>
+          <Button variant="contained" color="primary" size="large">
+            Reserve
+          </Button>
+        </Box>
       </Box>
     </Container>
   );
