@@ -33,3 +33,9 @@ Open http://localhost:3000 to view the app in your browser.
 ## Additional Notes
 Ensure an internet connection for proper API data fetching.
 Feel free to explore and modify the code based on your requirements.
+## Sample
+Home Page
+![image](https://github.com/GarvonGit/shopflo-frontend-assignment/assets/112396031/dad8c7c8-9016-4a86-9577-e857bb506882)
+Details Page
+![image](https://github.com/GarvonGit/shopflo-frontend-assignment/assets/112396031/d73a8660-5e82-441c-b4ce-b6052fdcbe1b)
+
