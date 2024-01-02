@@ -35,9 +35,11 @@ Ensure an internet connection for proper API data fetching.
 Feel free to explore and modify the code based on your requirements.
 ## Sample
 Home Page
-![image](https://github.com/GarvonGit/shopflo-frontend-assignment/assets/112396031/dad8c7c8-9016-4a86-9577-e857bb506882)
+![image](https://github.com/GarvonGit/shopflo-frontend-assignment/assets/112396031/bb015638-baac-44cc-8658-2e2d2bba29c0)
+
 Details Page
-![image](https://github.com/GarvonGit/shopflo-frontend-assignment/assets/112396031/24cd5a84-fea4-4275-93cf-f9323b5cde68)
+![image](https://github.com/GarvonGit/shopflo-frontend-assignment/assets/112396031/3e197bf1-10b5-4e32-ba0f-881f8f2e4dff)
+
 Booked Successfull
 ![image](https://github.com/GarvonGit/shopflo-frontend-assignment/assets/112396031/1c592e44-173c-4534-8cc3-affe54bc0efa)
 
