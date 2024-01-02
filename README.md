@@ -19,8 +19,8 @@ Welcome to the Shopflo Travel Booking App repository! This web application is de
 1. *Clone the repository:*
 
    ```bash
-   git clone https://github.com/GarvonGit/shopflo-travel-booking.git
-   cd shopflo-travel-booking
+   git clone https://github.com/GarvonGit/shopflo-frontend-assignment.git
+   cd shopflo-frontend-assignment
    
 2. *Install dependencies:*
    npm install
