@@ -13,7 +13,8 @@ Welcome to the TripAdvisor a Travel Booking App! This web application is designe
 - [React](https://reactjs.org/): A JavaScript library for building user interfaces.
 - [React Router](https://reactrouter.com/): Declarative routing for React.js.
 - API Fetching: Utilizes the provided API endpoint for fetching accommodation listings.
-- Material UI: used Material UI for Consistent and professional design.
+- [Material UI](https://mui.com/material-ui/): used Material UI for Consistent and professional design.
+
 
 ## Getting Started
 
@@ -31,9 +32,11 @@ Welcome to the TripAdvisor a Travel Booking App! This web application is designe
 
 Open http://localhost:3000 to view the app in your browser.
 
-## Additional Notes
-Ensure an internet connection for proper API data fetching.
-Feel free to explore and modify the code based on your requirements.
+
+ ## Assumptions:
+ 
+Added the Google Maps pin feature to the React web app. However, to activate it fully, we need a Google Maps API key, and it can be pasted into the src/map.js file, which requires a Google Cloud Platform billing account due to associated charges. If you have your own Google API key, then you can paste it into the maps.js file in the repository and it will run.
+
 
 ## Sample
 
@@ -48,6 +51,9 @@ Feel free to explore and modify the code based on your requirements.
 **Booked Successfully**
 
 ![image](https://github.com/GarvonGit/shopflo-frontend-assignment/assets/112396031/1c592e44-173c-4534-8cc3-affe54bc0efa)
+
+## Additional Notes
+Ensure an internet connection for proper API data fetching.
 
 ## Contact
 
